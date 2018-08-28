@@ -72,3 +72,6 @@ debug: Port        : 1337
 
 If you find a bug in the source code or a mistake in the documentation, you can help us by
 submitting an issue to our [Waffle Dashboard](https://waffle.io/udacity/mwnd-issues). Even better you can submit a Pull Request with a fix :)
+
+### Acknowledgement 
+[Manifest icons made by Freepik](https://www.flaticon.com/packs/holiday-travelling)
