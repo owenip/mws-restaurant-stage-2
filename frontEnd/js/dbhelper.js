@@ -43,9 +43,9 @@ class DBHelper {
    */
   static fetchRestaurantById(id, callback) {
     let URLForRestaurant = DBHelper.DATABASE_URL;
-    URLForRestaurant += '?id=' + id;
+    URLForRestaurant += `/${id}`;
     fetch(URLForRestaurant)
-      .then(response.json())
+      .then(response => response.json())
       .then(response => callback(null, response))
       .catch(callback());
 
