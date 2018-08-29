@@ -34,14 +34,6 @@ class IDBHelper {
             .then(jsonResponse => {
                 jsonResponse.map(restaurant => IDBHelper.insertRestaurant(restaurant, this.dbPromise))
             });
-
-        // fetch(DBHelper.DATABASE_URL)
-        //     .then(response => response.json())
-        //     .then(response => callback(null, response))
-        //     .catch(() =>{
-        //         console.log(`Request Failed: ${response}`);
-
-        //     });
     }
 
     static insertRestaurant(restaurant, dbPromise) {
