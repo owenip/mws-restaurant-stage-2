@@ -87,8 +87,6 @@ initMap = () => {
       id: 'mapbox.streets'
     }).addTo(newMap);
   }
-
-
   updateRestaurants();
 }
 /* window.initMap = () => {
@@ -149,7 +147,7 @@ resetRestaurants = (restaurants) => {
  */
 fillRestaurantsHTML = (restaurants = self.restaurants) => {
   const ul = document.getElementById('restaurants-list');
-  restaurants.forEach(restaurant => {
+  restaurants.forEach((restaurant) => {
     ul.append(createRestaurantHTML(restaurant));
   });
   addMarkersToMap();
@@ -170,9 +168,11 @@ createRestaurantHTML = (restaurant) => {
   const imageParts = imageDefaultSrc.split('.');
 
   const imageSmall = imageParts[0] + '-480_small.' + imageParts[1];
-  const imageMedium = imageParts[0] + '-800_medium.' + imageParts[1];
-  image.srcset = `${imageSmall} 480w, ${imageMedium} 800w`;
-  image.src = imageDefaultSrc;
+  // const imageMedium = imageParts[0] + '-800_medium.' + imageParts[1];
+  // image.srcset = `${imageSmall} 480w, ${imageMedium} 800w`;
+  // image.src = imageDefaultSrc;
+
+  image.src = imageSmall;
   image.alt = restaurant.name + ` restaurant promotional image`;
   li.append(image);
 
@@ -197,7 +197,6 @@ createRestaurantHTML = (restaurant) => {
   more.className = 'card-action';
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
-
 
   li.append(more);
 
